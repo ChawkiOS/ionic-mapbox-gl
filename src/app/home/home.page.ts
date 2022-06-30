@@ -16,7 +16,7 @@ export class HomePage {
 
 	ngOnInit() {
 		const mediaDarkMode = window.matchMedia('(prefers-color-scheme: dark)');
-		mediaDarkMode.addListener(this.switchMode);
+		mediaDarkMode.addEventListener('change', this.switchMode);
 
 		this.initMap(mediaDarkMode.matches);
 	}
